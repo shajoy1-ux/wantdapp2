@@ -1,0 +1,63 @@
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    './app/**/*.{js,jsx,ts,tsx}',
+    './components/**/*.{js,jsx,ts,tsx}',
+    './lib/**/*.{js,jsx,ts,tsx}',
+  ],
+  theme: {
+    extend: {
+      colors: {
+        bg: '#0C0C0E',
+        surface: '#161618',
+        'surface-hover': '#1c1c1e',
+        border: '#272729',
+        input: '#1a1a1c',
+        accent: '#FF5500',
+        'accent-hover': '#FF6B1A',
+        'accent-bg': 'rgba(255,85,0,0.1)',
+        'accent-border': 'rgba(255,85,0,0.25)',
+        muted: '#666',
+        'muted-high': '#888',
+        fg: '#F0F0F0',
+        'fg-sub': '#BABABA',
+        'wg': '#22c55e',
+        'wg-bg': 'rgba(34,197,94,0.1)',
+        'wg-border': 'rgba(34,197,94,0.25)',
+        'wb': '#60a5fa',
+        'wb-bg': 'rgba(59,130,246,0.1)',
+        'wb-border': 'rgba(59,130,246,0.25)',
+        'wy': '#fbbf24',
+        'wy-bg': 'rgba(251,191,36,0.1)',
+        'wp': '#f472b6',
+        'wr': '#f87171',
+        'wr-bg': 'rgba(248,113,113,0.08)',
+      },
+      fontFamily: {
+        sans: ['DM Sans', 'system-ui', '-apple-system', 'sans-serif'],
+      },
+      animation: {
+        'fade-up': 'fadeUp 0.35s ease both',
+        'fade-in': 'fadeIn 0.25s ease both',
+        'ping-slow': 'ping 1.5s cubic-bezier(0, 0, 0.2, 1) infinite',
+        'float': 'float 3s ease-in-out infinite',
+        'shimmer': 'shimmer 1.4s infinite linear',
+        'ticker': 'tickerSlide 0.3s ease both',
+      },
+      keyframes: {
+        fadeUp: { from: { opacity: 0, transform: 'translateY(20px)' }, to: { opacity: 1, transform: 'translateY(0)' } },
+        fadeIn: { from: { opacity: 0 }, to: { opacity: 1 } },
+        float: { '0%,100%': { transform: 'translateY(0)' }, '50%': { transform: 'translateY(-6px)' } },
+        shimmer: { '0%': { backgroundPosition: '-680px 0' }, '100%': { backgroundPosition: '680px 0' } },
+        tickerSlide: { from: { opacity: 0, transform: 'translateY(8px)' }, to: { opacity: 1, transform: 'translateY(0)' } },
+      },
+      boxShadow: {
+        'card': '0 4px 24px rgba(0,0,0,0.3)',
+        'card-hover': '0 12px 32px rgba(0,0,0,0.4)',
+        'glow': '0 4px 16px rgba(255,85,0,0.3)',
+      },
+      maxWidth: { container: '1200px' },
+    },
+  },
+  plugins: [],
+}
